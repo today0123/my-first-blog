@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block title %}home.html{% endblock %}
+
+{% load staticfiles%}
+{% block extrastyle %}{% static "css/home.css" %}{% endblock %}
+
+{% block content %}
+<div id="content">
+    <div id="homeimg1">
+        <a href="/"><img src="{% static 'img/django-actor-big2.jpg' %}" style="height:512px;width:440px;"/>
+            <img src="{% static 'img/risa.png' %}" style="height:512px;width:440px;"/>
+            <img src="{% static 'img/jisu.jpg' %}" style="height:512px;width:440px;"/>
+            <img src="{% static 'img/roze.jpg' %}" style="height:512px;width:440px;"/></a>
+        <h2 style = "margin: 0;">　　　　　　　인간 명품 제니♥　　　　　　　　　　　　　　상큼발랄 리사♥　　　　　　　　　　　　　　　여신 지수♥　　　　　　　　　　　　　　　명품 보이스 로제♥</h2>
+    </div>
+
+
+    <hr style="margin: 55px 0;">
+    <h2>BLACKPINK 최신 정보</h2>
+
+    <table id="applist">
+        <tr>
+            <td><b><i><a href="{% url 'bookmark:index' %}">BLACKPINK's Pages</a></i></b></td> 
+            <td class="Edit"><i><a href="#">Add</a></i></td>
+            <td class="Edit"><i><a href="#">Change</a></i></td>
+            <td rowspan="3"><img src="{% static 'img/bk.gif' %}" style="height:100px;width:180px;"/></td>    
+            <td rowspan="3"><img src="{% static 'img/2.gif' %}" style="height:100px;width:180px;"/></td>    
+            <td rowspan="3"><img src="{% static 'img/3.gif' %}" style="height:100px;width:180px;"/></td>    
+            <td rowspan="3"><img src="{% static 'img/4.gif' %}" style="height:100px;width:180px;"/></td>    
+            <td rowspan="3"><img src="{% static 'img/5.gif' %}" style="height:100px;width:180px;"/></td>    
+            <td rowspan="3"><img src="{% static 'img/6.gif' %}" style="height:100px;width:180px;"/></td>    
+            <td rowspan="3"><img src="{% static 'img/7.gif' %}" style="height:100px;width:180px;"/></td>    
+
+
+        </tr>
+
+        <tr>
+            <td><b><i><a href="{% url 'blog:index' %}">BLACKPINK Blogs</a></i></b></td>
+            <td class="Edit"><i><a href="#">Add</a></i></td>
+            <td class="Edit"><i><a href="#">Change</a></i></td>
+        </tr>
+
+        <tr>
+            <td><b><i><a href="#">BLACKPINK's Photo</a></i></b></td>
+            <td class="Edit"><i><a href="#">Add</a></i></td>
+            <td class="Edit"><i><a href="#">Change</a></i></td>
+        </tr>
+    </table>
+</div>
+{% endblock content%}
+
+{% block footer %}
+<div id="footer">
+    &copy; Hyunju 2018
+</div>
+{% endblock footer %}
